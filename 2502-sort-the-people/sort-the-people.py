@@ -5,19 +5,14 @@ class Solution:
 
         mapp = {heights[i]:names[i] for i in range(len(names))}
 
-        # worse case, I will have to do n passes
         for i in range(n):
-            # bubble sort
+
             for j in range(n - 1):
                 if heights[j] < heights[j + 1]:
-                    #temp = arr[0]
-                    #arr = [[1,8,7]]
-                    #arr[0]=arr[1]
-                    #arr[1]=arr[0]
-                    #arr[0],arr[1]=arr[1],arr[0]
-                    temp = heights[j]
+                    """temp = heights[j]
                     heights[j]=heights[j+1]
-                    heights[j+1]=temp
+                    heights[j+1]=temp"""
+                    heights[j],heights[j+1]=heights[j+1],heights[j]
         
 
         sorted_name=[mapp[heights[i]] for i in range(n)]
