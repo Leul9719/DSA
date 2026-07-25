@@ -9,9 +9,6 @@ class Solution:
 
             for j in range(n - 1):
                 if heights[j] < heights[j + 1]:
-                    """temp = heights[j]
-                    heights[j]=heights[j+1]
-                    heights[j+1]=temp"""
                     heights[j],heights[j+1]=heights[j+1],heights[j]
         
 
