@@ -3,7 +3,7 @@ class Solution:
 
         n = len(names)
 
-        mapp = {heights[i]:names[i] for i in range(len(names))}
+        #mapp = {heights[i]:names[i] for i in range(len(names))}
 
         for i in range(n):
 
@@ -15,8 +15,14 @@ class Solution:
                     heights[j]=heights[j+1]
                     heights[j+1]=temp
 
+                    #swap the names
+
+                    temp = names[j]
+                    names[j]=names[j+1]
+                    names[j+1]=temp
+
 
         
 
-        sorted_name=[mapp[heights[i]] for i in range(n)]
-        return sorted_name
+        #sorted_name=[mapp[heights[i]] for i in range(n)]
+        return names
