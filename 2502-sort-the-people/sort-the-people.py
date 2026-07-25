@@ -9,7 +9,13 @@ class Solution:
 
             for j in range(n - 1):
                 if heights[j] < heights[j + 1]:
-                    heights[j],heights[j+1]=heights[j+1],heights[j]
+                    #heights[j],heights[j+1]=heights[j+1],heights[j]
+                    #swap the hight
+                    temp = heights[j]
+                    heights[j]=heights[j+1]
+                    heights[j+1]=temp
+
+
         
 
         sorted_name=[mapp[heights[i]] for i in range(n)]
