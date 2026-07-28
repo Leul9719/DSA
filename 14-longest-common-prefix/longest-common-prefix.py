@@ -5,6 +5,6 @@ class Solution:
         for i in range(len(first)):
             char = first[i]
             for j in strs:
-                if i>=len(j) or j[i] != char:
+                if i >= len(j) or j[i] != char:
                     return first[:i]
         return first
